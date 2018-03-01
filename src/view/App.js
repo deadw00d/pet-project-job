@@ -21,6 +21,9 @@ class App extends Component {
     return dateParts.join('.')
   }
   render() {
+    let showDay = this.props.showDay
+    let showMonth = this.props.showMonth
+    let showYear = this.props.showYear
     return (
       <div className="App">
         <header className="App-header">
@@ -28,9 +31,9 @@ class App extends Component {
         </header>
         <div className="App-intro">
           <div className="toggleButtons">
-            <button onClick={() => this.props.toggleShowDay()}>Day</button>
-            <button onClick={() => this.props.toggleShowMonth()}>Month</button>
-            <button onClick={() => this.props.toggleShowYear()}>Year</button>
+            <button className={showDay ? 'pressed' :''} onClick={() => this.props.toggleShowDay()}>Day</button>
+            <button className={showMonth ? 'pressed' :''} onClick={() => this.props.toggleShowMonth()}>Month</button>
+            <button className={showYear ? 'pressed' :''} onClick={() => this.props.toggleShowYear()}>Year</button>
           </div>
           <h3>
             {this.getDate() || 'Not available'}
