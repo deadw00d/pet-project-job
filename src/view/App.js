@@ -31,9 +31,9 @@ class App extends Component {
         </header>
         <div className="App-intro">
           <div className="toggleButtons">
-            <button className={showDay ? 'pressed' :''} onClick={() => this.props.toggleShowDay()}>Day</button>
-            <button className={showMonth ? 'pressed' :''} onClick={() => this.props.toggleShowMonth()}>Month</button>
-            <button className={showYear ? 'pressed' :''} onClick={() => this.props.toggleShowYear()}>Year</button>
+            <button className={showDay ? 'pressed' :''} onClick={this.props.toggleShowDay}>Day</button>
+            <button className={showMonth ? 'pressed' :''} onClick={this.props.toggleShowMonth}>Month</button>
+            <button className={showYear ? 'pressed' :''} onClick={this.props.toggleShowYear}>Year</button>
           </div>
           <h3>
             {this.getDate() || 'Not available'}
