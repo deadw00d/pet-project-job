@@ -55,7 +55,7 @@ class App extends Component {
                     <h3>
                         {this.getDate() || 'Not available'}
                     </h3>
-                    <button onClick={() => this.props.clear()}>Clear</button>
+                    <button onClick={this.props.clear}>Clear</button>
                 </div>
             </div>
         );
